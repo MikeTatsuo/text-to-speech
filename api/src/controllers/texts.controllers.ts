@@ -1,5 +1,5 @@
-import { getRepository } from "typeorm";
-import { Texts } from "../entity";
+import { getRepository } from 'typeorm';
+import { Texts } from '../entity';
 
 export class TextsController {
 

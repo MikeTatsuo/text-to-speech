@@ -1,10 +1,11 @@
+// TODO: pegar essas informações da uma variável de ambiente
 {
   "type": "mysql",
-  "host": "localhost",
+  "host": "",
   "port": 3306,
-  "username": "teste",
-  "password": "Teste12!@texts",
-  "database": "smarkio",
+  "username": "",
+  "password": "",
+  "database": "",
   "synchronize": false,
   "logging": false,
   "entities": [
