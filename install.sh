@@ -146,11 +146,17 @@ save_on_bashrc() {
     chmod 664 $BASH_FILE
   fi
 
-  echo -e "\n# Usuário e senha para o MySQL smarkio" >>$BASH_FILE
+  echo -e "\n# MySQL smarkio" >>$BASH_FILE
   echo "export SMARKIO_USER=${DB_USER}" >>$BASH_FILE
   echo "export SMARKIO_PASSWD=${DB_USER_PASSWD}" >>$BASH_FILE
   echo "export SMARKIO_DB=${DB}" >>$BASH_FILE
   echo "export SMARKIO_HOST='localhost'" >>$BASH_FILE
+  echo "export SMARKIO_DB_PORT=${DB_PORT}" >>$BASH_FILE
+  echo -e "\n# API smarkio" >>$BASH_FILE
+  echo "export SRMAKIO_API_BASEURL='http://localhost'" >>$BASH_FILE
+  echo "export SMARKIO_API_PORT=${API_PORT}" >>$BASH_FILE
+  echo -e "\n# IBM Watson Text to Speech" >>$BASH_FILE
+  echo "export TEXT_TO_SPEECH_IAM_APIKEY='${WATSON_APIKEY}'" >>$BASH_FILE
 
   source $BASH_FILE
 }
@@ -171,6 +177,8 @@ start() {
   request_access
   create_user
   create_db
+
+  # TODO: Criar métodos para setar as variáveis de ambiente que faltam
 }
 
 #

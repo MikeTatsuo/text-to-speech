@@ -1,0 +1,7 @@
+.text-container{
+  display: flex;
+}
+
+.text {
+  flex-grow: 1;
+}

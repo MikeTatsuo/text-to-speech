@@ -1,0 +1,10 @@
+.textarea-wrapper {
+  width: 50%;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+}
+
+#comment-box{
+  height: 30vh;
+}
